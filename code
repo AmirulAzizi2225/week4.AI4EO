@@ -25,3 +25,64 @@ plt.scatter(centers[:, 0], centers[:, 1], c='black', s=200, alpha=0.5)
 plt.show()
 
 
+from sklearn.mixture import GaussianMixture
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Sample data
+X = np.random.rand(100, 2)
+
+# GMM model
+gmm = GaussianMixture(n_components=3)
+gmm.fit(X)
+y_gmm = gmm.predict(X)
+
+# Plotting
+plt.scatter(X[:, 0], X[:, 1], c=y_gmm, cmap='viridis')
+centers = gmm.means_
+plt.scatter(centers[:, 0], centers[:, 1], c='black', s=200, alpha=0.5)
+plt.title('Gaussian Mixture Model')
+plt.show()
+
+import rasterio
+import numpy as np
+from sklearn.cluster import KMeans
+import matplotlib.pyplot as plt
+
+base_path = "/content/drive/MyDrive/GEOL0069 AI4EO/Week 4/Unsupervised Learning/S2A_MSIL1C_20190301T235611_N0207_R116_T01WCU_20190302T014622.SAFE/GRANULE/L1C_T01WCU_A019275_20190301T235610/IMG_DATA/" # You need to specify the path
+bands_paths = {
+    'B4': base_path + 'T01WCU_20190301T235611_B04.jp2',
+    'B3': base_path + 'T01WCU_20190301T235611_B03.jp2',
+    'B2': base_path + 'T01WCU_20190301T235611_B02.jp2'
+}
+
+# Read and stack the band images
+band_data = []
+for band in ['B4']:
+    with rasterio.open(bands_paths[band]) as src:
+        band_data.append(src.read(1))
+
+# Stack bands and create a mask for valid data (non-zero values in all bands)
+band_stack = np.dstack(band_data)
+valid_data_mask = np.all(band_stack > 0, axis=2)
+
+# Reshape for K-means, only including valid data
+X = band_stack[valid_data_mask].reshape((-1, 1))
+
+# K-means clustering
+kmeans = KMeans(n_clusters=2, random_state=0).fit(X)
+labels = kmeans.labels_
+
+# Create an empty array for the result, filled with a no-data value (e.g., -1)
+labels_image = np.full(band_stack.shape[:2], -1, dtype=int)
+
+# Place cluster labels in the locations corresponding to valid data
+labels_image[valid_data_mask] = labels
+
+# Plotting the result
+plt.imshow(labels_image, cmap='viridis')
+plt.title('K-means clustering on Sentinel-2 Bands')
+plt.colorbar(label='Cluster Label')
+plt.show()
+
+del kmeans, labels, band_data, band_stack, valid_data_mask, X, labels_image
