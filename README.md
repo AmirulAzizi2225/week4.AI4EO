@@ -1,6 +1,6 @@
 Echo Classification: Leads vs. Sea Ice
 
-Overview
+## Overview
 This project aims to classify radar echoes into two categories: Leads and Sea Ice, using unsupervised learning methods. The classification is performed on Sentinel-2 optical data and Sentinel-3 altimetry data, and the results are compared against the ESA official classification using a confusion matrix.
 
 Objectives
