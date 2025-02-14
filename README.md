@@ -1,14 +1,14 @@
-## Week 4 AI4EO Assignment
+# Week 4 AI4EO Assignment
 ## Echo Classification: Leads vs. Sea Ice and standard deviation of both classes
 
-## Overview
+# Overview
 This Github project aims to classify echoes into two distinct categories: Leads and Sea Ice, using unsupervised learning methods. The classification is performed on Sentinel-2 optical data and Sentinel-3 altimetry data, and the results are compared against the ESA official classification using a confusion matrix. 
 
-## Dataset
+# Dataset
 - Satellite Data: Sentinel-2 optical data & Sentinel-3 altimetry data.
 - Preprocessing: Data is preprocessed to extract relevant features for clustering and classification.
 
-## Methodology
+# Methodology
 1. Data Preprocessing
    - Load and clean the satellite data.
    - Extract echo features relevant for classification.
@@ -33,12 +33,12 @@ K-means clustering is a type of unsupervised learning algorithm capable of split
 Gaussian Mixture Models (GMM) are a probabilistic model for representing normally distributed subpopulations within an overall population. The model assumes that the data is generated from a mixture of several Gaussian distributions, each with its own mean and variance (reynolds2009gaussian; mclachlan2004finite). GMMs are widely used for clustering and density estimation, as they provide a method for representing complex distributions through the combination of simpler ones.
 
 
-## Results
+# Results
 
-# K-Means clustering on Sentinel-2 data
+## K-Means clustering on Sentinel-2 data
 ![kmeans_clustering](https://github.com/user-attachments/assets/e40c0057-7383-48d7-bb14-74107b678c07)
 
-# GMM clustering on Sentinel-2 data
+## GMM clustering on Sentinel-2 data
 ![GMM_clustering](https://github.com/user-attachments/assets/8cdac3bf-31b6-4c7a-9524-864898852693)
 
 
