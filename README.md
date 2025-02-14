@@ -4,6 +4,9 @@
 ## Overview
 This Github project aims to classify echoes into two distinct categories: Leads and Sea Ice, using unsupervised learning methods. The classification is performed on Sentinel-2 optical data and Sentinel-3 altimetry data, and the results are compared against the ESA official classification using a confusion matrix. 
 
+
+![image1_0](https://github.com/user-attachments/assets/ca4a7499-59d1-4272-b213-904b84994b0d)
+
 ## Dataset
 - Satellite Data: Sentinel-2 optical data & Sentinel-3 altimetry data.
 - Preprocessing: Data is preprocessed to extract relevant features for clustering and classification.
