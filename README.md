@@ -8,7 +8,7 @@ This Github project aims to classify echoes into two distinct categories: Leads 
 - Satellite Data: Sentinel-2 optical data & Sentinel-3 altimetry data.
 - Preprocessing: Data is preprocessed to extract relevant features for clustering and classification.
 
-Methodology
+## Methodology
 1. Data Preprocessing
    - Load and clean the satellite data.
    - Extract echo features relevant for classification.
@@ -24,7 +24,7 @@ Methodology
    - Compare our results with ESA’s official classification using a confusion matrix.
    - Compute performance metrics (accuracy, precision, recall, F1-score).
 
-Results
+## Results
 - Confusion matrix showing classification performance.
 - Plots of average echo shapes for Leads and Sea Ice.
 - Standard deviation analysis** to evaluate variations in echoes.
