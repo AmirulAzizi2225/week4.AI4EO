@@ -26,19 +26,19 @@ Two different datasets will be used  to leverage the ability of the different cl
 Satellite Data: Sentinel-2 optical data & Sentinel-3 altimetry data.
 
 # Data preprocessing 
-There are several data preprocessing function were utilised to extract relevant features for clustering and classification.
+We will be using several data preprocessing functions to extract relevant features for clustering and classification.
 
 1. peakiness:
 This function will calculates the peakiness of a waveform, which is useful for classifying altimetry echoes.
 
 2. unpack_gpod(variable):
-This fucntion extracts and processes satellite altimetry data from a netCDF file
+This function extracts and processes satellite altimetry data from a netCDF file
 
-3.calculate_SSD(RIP):
+3. calculate_SSD(RIP):
 This function calculates Surface Spread Deviation (SSD), a measure of the spread of a waveform.
 
 
-For this assignement, we will be utilising two very common clustering types, K-means clustering and Gausssian Mixture Models (GMM) clustering. Here are some brief explanation on both clustering methods:
+For this assignement, we will be utilising two widely-used clustering types, K-means clustering and Gausssian Mixture Models (GMM) clustering. Here are some brief explanation on both clustering methods:
 
 # Cluster Models
 ## K-means clustering 
