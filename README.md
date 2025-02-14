@@ -2,30 +2,45 @@
 ## Echo Classification: Leads vs. Sea Ice and standard deviation of both classes
 
 # Overview
-This Github project aims to classify echoes into two distinct categories: Leads and Sea Ice, using unsupervised learning methods. The classification is performed on Sentinel-2 optical data and Sentinel-3 altimetry data, and the results are compared against the ESA official classification using a confusion matrix. 
+This Github project focuses on classifying echoes into two distinct categories: Leads and Sea Ice, using unsupervised learning methods. The classification is performed on Sentinel-2 optical data and Sentinel-3 altimetry data, providing insights into the effectiveness of different cluster techniques. The results are further validated by comparing our computed model against the ESA official classification using a confusion matrix. 
 
-# Dataset
-- Satellite Data: Sentinel-2 optical data & Sentinel-3 altimetry data.
-- Preprocessing: Data is preprocessed to extract relevant features for clustering and classification.
-
-# Methodology
+# Key working steps
 1. Data Preprocessing
    - Load and clean the satellite data.
    - Extract echo features relevant for classification.
    
 2. Unsupervised Classification (K-means Clustering)
    - Apply K-means clustering to distinguish between Leads and Sea Ice.
-   - Visualize and analyze cluster separation.
+   - Visualise and analyse cluster separation.
 
 3. Computation of Echo Shapes
    - Calculate average echo shape and standard deviation for each class.
    
 4. Validation with ESA Classification
    - Compare our results with ESA’s official classification using a confusion matrix.
-   - Compute performance metrics (accuracy, precision, recall, F1-score).
+   - Compute performance matrix (accuracy, precision, recall, F1-score).
+
+# Dataset
+Two different datasets will be used  to leverage the ability of the different clusters in classifying sea-ice and leads:
+
+Satellite Data: Sentinel-2 optical data & Sentinel-3 altimetry data.
+
+# Data preprocessing 
+There are several data preprocessing function were utilised to extract relevant features for clustering and classification.
+
+1. peakiness:
+This function will calculates the peakiness of a waveform, which is useful for classifying altimetry echoes.
+
+2. unpack_gpod(variable):
+This fucntion extracts and processes satellite altimetry data from a netCDF file
+
+3.calculate_SSD(RIP):
+This function calculates Surface Spread Deviation (SSD), a measure of the spread of a waveform.
+
 
 For this assignement, we will be utilising two very common clustering types, K-means clustering and Gausssian Mixture Models (GMM) clustering. Here are some brief explanation on both clustering methods:
 
+# Cluster Models
 ## K-means clustering 
 K-means clustering is a type of unsupervised learning algorithm capable of splitting complex datasets into several k groups, where k represents the number of groups pre-specified by the analyst. It classifies the data points based on the similarity of the features of the data (macqueen1967some). The basic idea is to define k centroids, one for each cluster, and then assign each data point to the nearest centroid, while keeping the centroids as small as possible.
 
