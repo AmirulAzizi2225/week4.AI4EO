@@ -4,9 +4,6 @@
 ## Overview
 This Github project aims to classify echoes into two distinct categories: Leads and Sea Ice, using unsupervised learning methods. The classification is performed on Sentinel-2 optical data and Sentinel-3 altimetry data, and the results are compared against the ESA official classification using a confusion matrix. 
 
-
-![image1_0](https://github.com/user-attachments/assets/ca4a7499-59d1-4272-b213-904b84994b0d)
-
 ## Dataset
 - Satellite Data: Sentinel-2 optical data & Sentinel-3 altimetry data.
 - Preprocessing: Data is preprocessed to extract relevant features for clustering and classification.
@@ -27,7 +24,7 @@ This Github project aims to classify echoes into two distinct categories: Leads 
    - Compare our results with ESA’s official classification using a confusion matrix.
    - Compute performance metrics (accuracy, precision, recall, F1-score).
 
-For this assignement, we will be utilising two very common clustering types, K-means clustering and Gausssian Mixture Models (GMM) clustering. 
+For this assignement, we will be utilising two very common clustering types, K-means clustering and Gausssian Mixture Models (GMM) clustering. Here are some brief explanation on both clustering methods:
 
 ## K-means clustering 
 K-means clustering is a type of unsupervised learning algorithm capable of splitting complex datasets into several k groups, where k represents the number of groups pre-specified by the analyst. It classifies the data points based on the similarity of the features of the data (macqueen1967some). The basic idea is to define k centroids, one for each cluster, and then assign each data point to the nearest centroid, while keeping the centroids as small as possible.
@@ -37,9 +34,13 @@ Gaussian Mixture Models (GMM) are a probabilistic model for representing normall
 
 
 ## Results
-- Confusion matrix showing classification performance.
-- Plots of average echo shapes for Leads and Sea Ice.
-- Standard deviation analysis** to evaluate variations in echoes.
+
+# K-Means clustering on Sentinel-2 data
+![kmeans_clustering](https://github.com/user-attachments/assets/e40c0057-7383-48d7-bb14-74107b678c07)
+
+# GMM clustering on Sentinel-2 data
+![Uploading GMM_clustering.png…]()
+
 
 Contributor: Muhammad Amirul Haziq Bin Azizi (https://github.com/AmirulAzizi2225)
 
