@@ -39,7 +39,8 @@ Gaussian Mixture Models (GMM) are a probabilistic model for representing normall
 ![kmeans_clustering](https://github.com/user-attachments/assets/e40c0057-7383-48d7-bb14-74107b678c07)
 
 # GMM clustering on Sentinel-2 data
-![Uploading GMM_clustering.png…]()
+![GMM_clustering](https://github.com/user-attachments/assets/8cdac3bf-31b6-4c7a-9524-864898852693)
+
 
 
 Contributor: Muhammad Amirul Haziq Bin Azizi (https://github.com/AmirulAzizi2225)
