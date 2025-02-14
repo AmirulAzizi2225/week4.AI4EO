@@ -2,14 +2,9 @@
 ## Echo Classification: Leads vs. Sea Ice and standard deviation of both classes
 
 ## Overview
-This project aims to classify radar echoes into two categories: Leads and Sea Ice, using unsupervised learning methods. The classification is performed on Sentinel-2 optical data and Sentinel-3 altimetry data, and the results are compared against the ESA official classification using a confusion matrix.
+This Github project aims to classify echoes into two distinct categories: Leads and Sea Ice, using unsupervised learning methods. The classification is performed on Sentinel-2 optical data and Sentinel-3 altimetry data, and the results are compared against the ESA official classification using a confusion matrix. 
 
-## Objectives
-- Classify echoes into Leads and Sea Ice using clustering techniques.
-- Compute average echo shapes and standard deviations for each class.
-- Validate classification accuracy by comparing with ESA’s official classification using a confusion matrix.
-
-Dataset
+## Dataset
 - Satellite Data: Sentinel-2 optical data & Sentinel-3 altimetry data.
 - Preprocessing: Data is preprocessed to extract relevant features for clustering and classification.
 
