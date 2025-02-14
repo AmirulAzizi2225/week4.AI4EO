@@ -41,8 +41,12 @@ Gaussian Mixture Models (GMM) are a probabilistic model for representing normall
 ## GMM clustering on Sentinel-2 data
 ![GMM_clustering](https://github.com/user-attachments/assets/8cdac3bf-31b6-4c7a-9524-864898852693)
 
+We can observe that in this case, GMM cluster does a much better job than k-means cluster at classfying sea-ice and leads for Sentinel-2 optical data.
+
+## Mean and standard deviation of sea-ice and lead
+![mean_std](https://github.com/user-attachments/assets/a850c347-4ebb-44a2-b09a-0f335d8f3e6f)
 
 
-Contributor: Muhammad Amirul Haziq Bin Azizi (https://github.com/AmirulAzizi2225)
+Author: Muhammad Amirul Haziq Bin Azizi (https://github.com/AmirulAzizi2225)
 
 
