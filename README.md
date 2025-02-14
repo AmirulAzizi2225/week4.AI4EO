@@ -24,6 +24,15 @@ This Github project aims to classify echoes into two distinct categories: Leads 
    - Compare our results with ESA’s official classification using a confusion matrix.
    - Compute performance metrics (accuracy, precision, recall, F1-score).
 
+For this assignement, we will be utilising two very common clustering types, K-means clustering and Gausssian Mixture Models (GMM) clustering. 
+
+## K-means clustering 
+K-means clustering is a type of unsupervised learning algorithm capable of splitting complex datasets into several k groups, where k represents the number of groups pre-specified by the analyst. It classifies the data points based on the similarity of the features of the data (macqueen1967some). The basic idea is to define k centroids, one for each cluster, and then assign each data point to the nearest centroid, while keeping the centroids as small as possible.
+
+## Gaussian Mixture Models (GMM)
+Gaussian Mixture Models (GMM) are a probabilistic model for representing normally distributed subpopulations within an overall population. The model assumes that the data is generated from a mixture of several Gaussian distributions, each with its own mean and variance (reynolds2009gaussian; mclachlan2004finite). GMMs are widely used for clustering and density estimation, as they provide a method for representing complex distributions through the combination of simpler ones.
+
+
 ## Results
 - Confusion matrix showing classification performance.
 - Plots of average echo shapes for Leads and Sea Ice.
