@@ -1,4 +1,4 @@
-## Week4 Assignment
+## Week 4 AI4EO Assignment
 ## Echo Classification: Leads vs. Sea Ice and standard deviation of both classes
 
 ## Overview
@@ -38,7 +38,6 @@ Gaussian Mixture Models (GMM) are a probabilistic model for representing normall
 - Plots of average echo shapes for Leads and Sea Ice.
 - Standard deviation analysis** to evaluate variations in echoes.
 
-Contributors
-- Muhammad Amirul Haziq Bin Azizi (https://github.com/AmirulAzizi2225)
+Contributor: Muhammad Amirul Haziq Bin Azizi (https://github.com/AmirulAzizi2225)
 
 
