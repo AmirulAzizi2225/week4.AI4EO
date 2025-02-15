@@ -1,4 +1,7 @@
 # Week 4 AI4EO Assignment
+
+Author: Amirul Azizi (22074200)
+
 ## Echo Classification: Leads vs. Sea Ice and standard deviation of both classes
 
 # Overview
