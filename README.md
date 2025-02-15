@@ -9,8 +9,8 @@ This Github project focuses on classifying echoes into two distinct categories: 
    - Load and clean the satellite data.
    - Extract echo features relevant for classification.
    
-2. Unsupervised Classification (K-means Clustering)
-   - Apply K-means clustering to distinguish between Leads and Sea Ice.
+2. Unsupervised Classification (K-means Clustering) and Gaussian Mixture Models
+   - Apply K-means and GMM clustering to distinguish between Leads and Sea Ice.
    - Visualise and analyse cluster separation.
 
 3. Computation of Echo Shapes
@@ -37,16 +37,20 @@ This function extracts and processes satellite altimetry data from a netCDF file
 3. calculate_SSD(RIP):
 This function calculates Surface Spread Deviation (SSD), a measure of the spread of a waveform.
 
-
 For this assignement, we will be utilising two widely-used clustering types, K-means clustering and Gausssian Mixture Models (GMM) clustering. Here are some brief explanation on both clustering methods:
 
 # Cluster Models
 ## K-means clustering 
 K-means clustering is a type of unsupervised learning algorithm capable of splitting complex datasets into several k groups, where k represents the number of groups pre-specified by the analyst. It classifies the data points based on the similarity of the features of the data (macqueen1967some). The basic idea is to define k centroids, one for each cluster, and then assign each data point to the nearest centroid, while keeping the centroids as small as possible.
 
-## Gaussian Mixture Models (GMM)
-Gaussian Mixture Models (GMM) are a probabilistic model for representing normally distributed subpopulations within an overall population. The model assumes that the data is generated from a mixture of several Gaussian distributions, each with its own mean and variance (reynolds2009gaussian; mclachlan2004finite). GMMs are widely used for clustering and density estimation, as they provide a method for representing complex distributions through the combination of simpler ones.
+The process begins by selecting the number of clusters (K) and randomly initializing K centroids. Each data point is then assigned to the nearest centroid, after which the centroids are updated based on the assigned points. This iterative process continues until the centroids no longer change, indicating convergence. While K-Means is efficient for large datasets, it is sensitive to centroid initialization and assumes that clusters are spherical and well-separated. The optimal number of clusters (K) can be determined using techniques like the Elbow Method or Silhouette Score. Despite its limitations, K-Means is widely used in customer segmentation, image segmentation, anomaly detection, and text mining, making it a powerful tool for various real-world applications.
 
+## Gaussian Mixture Models (GMM)
+Gaussian Mixture Models (GMM) are a probabilistic model used for representing normally distributed subpopulations within a larger dataset. Unlike hard clustering methods such as K-Means, which assign each data point to a single cluster, GMM is a soft clustering technique, meaning that each point has a probability of belonging to multiple clusters rather than being strictly assigned to just one. The model assumes that the data is generated from a mixture of several Gaussian (normal) distributions, each characterized by its own mean (μ), variance (σ²), and weight (π), which determines its contribution to the overall distribution (Reynolds, 2009; McLachlan & Peel, 2004).
+
+GMMs are particularly powerful because they can model complex, multi-modal distributions by combining multiple simpler Gaussian distributions. The parameters of these Gaussian components are typically estimated using the Expectation-Maximization (EM) algorithm, which iteratively refines the model by estimating the probabilities of cluster assignments (E-step) and optimizing the parameters of the Gaussian distributions (M-step) until convergence is reached. This flexibility allows GMMs to capture elliptical or overlapping clusters, making them more versatile than K-Means, which assumes spherical clusters of equal variance.
+
+Due to their ability to perform both clustering and density estimation, GMMs are widely used in speech recognition, anomaly detection, image segmentation, and financial modeling. They are particularly useful in scenarios where data points may belong to multiple categories with varying degrees of certainty, making them well-suited for probabilistic classification and unsupervised learning tasks.
 
 # Results
 
@@ -72,6 +76,9 @@ We can observe that in this case, GMM cluster does a much better job than k-mean
 ## Waveform alignment using cross-correlation on GMM clustering
 ![10equally_spaced_GMM](https://github.com/user-attachments/assets/0419e4ef-59cc-4b72-9304-531a0fd3c3c7)
 
+## How number of intervals affect our waveform alignment
+For the sake of observing the trend when interval increases, we can align waveforms with 100 equally spaced fucntion where cluster_gmm = 0
+![100equally_spaced_GMM](https://github.com/user-attachments/assets/6984fa22-c6cc-4b27-97e0-7a26a7522cfb)
 
 
 ## Quantification of echoes against ESA classification using confusion matrix on K-means clustering
