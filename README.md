@@ -58,12 +58,56 @@ Gaussian Mixture Models (GMM) are a probabilistic model for representing normall
 
 We can observe that in this case, GMM cluster does a much better job than k-means cluster at classfying sea-ice and leads for Sentinel-2 optical data.
 
-## Mean and standard deviation of sea-ice and lead
-![mean_std](https://github.com/user-attachments/assets/a850c347-4ebb-44a2-b09a-0f335d8f3e6f)
-This plot describe the mean and standard deviation of sea-ice and lead
+## Mean and standard deviation of sea-ice and lead using K-means clustering
+![mean_std_kmeans](https://github.com/user-attachments/assets/d74573bf-edb5-4de1-8597-4628440dd1a7)
 
-## Quantification of echoes against ESA official classification using confusion matrix
+## Mean and standard deviation of sea-ice and lead using GMM clustering
+![mean_std_GMM](https://github.com/user-attachments/assets/a1e6de40-86b5-457e-8ce3-ae3c95757808)
 
+
+## Waveform alignment using cross-correlation on K-means clustering
+![10equally_spaced_kmeans](https://github.com/user-attachments/assets/44ffc600-62be-4efc-be6b-075d8715c01d)
+
+
+## Waveform alignment using cross-correlation on GMM clustering
+![10equally_spaced_GMM](https://github.com/user-attachments/assets/0419e4ef-59cc-4b72-9304-531a0fd3c3c7)
+
+
+
+## Quantification of echoes against ESA classification using confusion matrix on K-means clustering
+Confusion Matrix:
+[[   0 4885   10 3983]
+ [1527    0 1755   35]
+ [   0    0    0    0]
+ [   0    0    0    0]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+         0.0       0.00      0.00      0.00    8878.0
+         1.0       0.00      0.00      0.00    3317.0
+         2.0       0.00      0.00      0.00       0.0
+         3.0       0.00      0.00      0.00       0.0
+
+    accuracy                           0.00   12195.0
+   macro avg       0.00      0.00      0.00   12195.0
+weighted avg       0.00      0.00      0.00   12195.0
+
+## Quantification of echoes against ESA classification using confusion matrix on GMM clustering
+
+Confusion Matrix:
+[[8856   22]
+ [  24 3293]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+         0.0       1.00      1.00      1.00      8878
+         1.0       0.99      0.99      0.99      3317
+
+    accuracy                           1.00     12195
+   macro avg       1.00      1.00      1.00     12195
+weighted avg       1.00      1.00      1.00     12195
 
 
 Author: Muhammad Amirul Haziq Bin Azizi (https://github.com/AmirulAzizi2225)
