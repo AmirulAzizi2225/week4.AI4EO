@@ -58,27 +58,34 @@ Due to their ability to perform both clustering and density estimation, GMMs are
 # Results
 
 ## K-Means clustering on Sentinel-2 data
+
 ![kmeans_clustering](https://github.com/user-attachments/assets/f02e7df9-52d4-4015-b17b-f7189fb96632)
 
 ## GMM clustering on Sentinel-2 data
+
 ![GMM_clustering](https://github.com/user-attachments/assets/8cdac3bf-31b6-4c7a-9524-864898852693)
 
 We can observe that in this case, GMM cluster does a much better job than k-means cluster at classfying sea-ice and leads for Sentinel-2 optical data where the distinction between the two parameters are more clearly distinguished.
 
 ## Mean and standard deviation of sea-ice and lead using K-means clustering
+
 ![mean_std_kmeans](https://github.com/user-attachments/assets/d74573bf-edb5-4de1-8597-4628440dd1a7)
 
 ## Mean and standard deviation of sea-ice and lead using GMM clustering
+
 ![mean_std_GMM](https://github.com/user-attachments/assets/a1e6de40-86b5-457e-8ce3-ae3c95757808)
 
 ## Waveform alignment using cross-correlation on K-means clustering
+
 ![10equally_spaced_kmeans](https://github.com/user-attachments/assets/44ffc600-62be-4efc-be6b-075d8715c01d)
 
 ## Waveform alignment using cross-correlation on GMM clustering
+
 ![10equally_spaced_GMM](https://github.com/user-attachments/assets/0419e4ef-59cc-4b72-9304-531a0fd3c3c7)
 
 ## How number of intervals affect our waveform alignment
 For the sake of observing the trend when interval increases, we can align waveforms with 100 equally spaced function where cluster_gmm = 0.
+
 ![100equally_spaced_GMM](https://github.com/user-attachments/assets/6984fa22-c6cc-4b27-97e0-7a26a7522cfb)
 
 We can observe the alignment significantly improves when we increase the spaced function from 10 to 100.
