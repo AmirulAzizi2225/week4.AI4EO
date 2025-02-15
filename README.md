@@ -1,11 +1,11 @@
 # Week 4 AI4EO Assignment
 
-Author: Amirul Azizi (22074200)
+Author: Amirul Azizi (https://github.com/AmirulAzizi2225) (22074200)
 
 ## Echo Classification: Leads vs. Sea Ice and standard deviation of both classes
 
 # Overview
-This Github project focuses on classifying echoes into two distinct categories: Leads and Sea Ice, using unsupervised learning methods. The classification is performed on Sentinel-2 optical data and Sentinel-3 altimetry data, providing insights into the effectiveness of different cluster techniques. The results are further validated by comparing our computed model against the ESA official classification using a confusion matrix. 
+This Github project focuses on classifying optical data and echoes into two distinct categories: Leads and Sea Ice, using unsupervised learning methods. The classification is performed on Sentinel-2 optical data and Sentinel-3 altimetry data, providing insights into the effectiveness of different cluster techniques. The results are further validated by comparing our computed model against the ESA official classification using a confusion matrix. 
 
 # Key working steps
 1. Data Preprocessing
@@ -63,7 +63,7 @@ Due to their ability to perform both clustering and density estimation, GMMs are
 ## GMM clustering on Sentinel-2 data
 ![GMM_clustering](https://github.com/user-attachments/assets/8cdac3bf-31b6-4c7a-9524-864898852693)
 
-We can observe that in this case, GMM cluster does a much better job than k-means cluster at classfying sea-ice and leads for Sentinel-2 optical data.
+We can observe that in this case, GMM cluster does a much better job than k-means cluster at classfying sea-ice and leads for Sentinel-2 optical data where the distinction between the two parameters are more clearly distinguished.
 
 ## Mean and standard deviation of sea-ice and lead using K-means clustering
 ![mean_std_kmeans](https://github.com/user-attachments/assets/d74573bf-edb5-4de1-8597-4628440dd1a7)
@@ -71,18 +71,17 @@ We can observe that in this case, GMM cluster does a much better job than k-mean
 ## Mean and standard deviation of sea-ice and lead using GMM clustering
 ![mean_std_GMM](https://github.com/user-attachments/assets/a1e6de40-86b5-457e-8ce3-ae3c95757808)
 
-
 ## Waveform alignment using cross-correlation on K-means clustering
 ![10equally_spaced_kmeans](https://github.com/user-attachments/assets/44ffc600-62be-4efc-be6b-075d8715c01d)
-
 
 ## Waveform alignment using cross-correlation on GMM clustering
 ![10equally_spaced_GMM](https://github.com/user-attachments/assets/0419e4ef-59cc-4b72-9304-531a0fd3c3c7)
 
 ## How number of intervals affect our waveform alignment
-For the sake of observing the trend when interval increases, we can align waveforms with 100 equally spaced fucntion where cluster_gmm = 0
+For the sake of observing the trend when interval increases, we can align waveforms with 100 equally spaced function where cluster_gmm = 0.
 ![100equally_spaced_GMM](https://github.com/user-attachments/assets/6984fa22-c6cc-4b27-97e0-7a26a7522cfb)
 
+We can observe the alignment significantly improves when we increase the spaced function from 10 to 100.
 
 ## Quantification of echoes against ESA classification using confusion matrix on K-means clustering
 Confusion Matrix:
@@ -120,4 +119,3 @@ Classification Report:
 weighted avg       1.00      1.00      1.00     12195
 
 
-Author: Muhammad Amirul Haziq Bin Azizi (https://github.com/AmirulAzizi2225)
